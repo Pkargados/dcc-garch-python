@@ -1,5 +1,7 @@
-# Claude Code local settings
+# Claude Code local settings and project notes
 .claude/
+CLAUDE.md
+MEMORY.md
 
 # Data files
 data/live.db
