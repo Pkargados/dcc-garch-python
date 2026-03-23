@@ -1,0 +1,32 @@
+# Claude Code local settings
+.claude/
+
+# Data files
+data/live.db
+data/*.pkl
+data/*.csv
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.Python
+*.egg-info/
+dist/
+build/
+
+# Generated outputs
+outputs/*.pdf
+
+# Environment
+.env
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

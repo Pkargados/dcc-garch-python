@@ -1,0 +1,44 @@
+\name{goGARCHspec-class}
+\docType{class}
+\alias{goGARCHspec-class}
+\alias{show,goGARCHspec-method}
+\title{class: GO-GARCH Specification Class}
+\description{Class for the GO-GARCH specification.}
+\section{Objects from the Class}{
+The class is returned by calling the function \code{\link{gogarchspec}}.
+}
+\section{Slots}{
+  \describe{
+    \item{\code{model}:}{ Multivariate model specification.}
+    \item{\code{umodel}:}{ Univariate model specification.}
+  }
+}
+\section{Extends}{
+Class \code{mGARCHspec}, directly.\\
+Class \code{GARCHspec} object from the \pkg{rugarch} package, by class \code{mGARCHspec}, distance 2.\\
+Class \code{rGARCH} object from the \pkg{rugarch} package, by class \code{mGARCHspec}, distance 3.
+}
+\section{Methods}{
+\describe{
+\item{show}{\code{signature(object = "goGARCHspec")}: Summary method. }
+}
+}
+\references{
+van der Weide, R. 2002, GO-GARCH: a multivariate generalized orthogonal GARCH
+model, \emph{Journal of Applied Econometrics},  549--564.\cr
+Zhang, K. and Chan, L. 2009, Efficient factor GARCH models and factor-DCC models,
+\emph{Quantitative Finance}, 71--91.\cr
+Broda, S.A. and Paolella, M.S. 2009, CHICAGO: A Fast and Accurate Method for
+Portfolio Risk Calculation, \emph{Journal of Financial Econometrics}, 412--436.\cr
+Ghalanos, A., Rossi, E., and Urga, G. 2015, Independent factor autoregressive
+conditional density model, \emph{Econometric Reviews}, \bold{34}(5), 594--616.
+}
+\author{Alexios Galanos}
+\note{
+The mixing matrix in the GO-GARCH model implemented in the rmgarch package is
+based on non-parametric independent component analysis (ICA) methodology.
+The estimation is a 2-stage methodology described in Broda and Paolella (2009)
+and Zhang and Chan (2009). The extension to the use of the full multivariate
+affine GH distribution is detailed in Ghalanos et al (2011).
+}
+\keyword{classes}
