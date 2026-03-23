@@ -1,2 +1,2 @@
 *.ipynb linguist-detectable=false
-references/ linguist-detectable=false
+references/** linguist-vendored=true
