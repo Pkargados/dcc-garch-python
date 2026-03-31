@@ -60,6 +60,7 @@ def run_pipeline(
             Z       : ndarray (T, N) — standardized residuals
             sigmas  : ndarray (T, N) — conditional vols in % daily
             params  : list of N Series — per-asset GJR params
+            results : list of N ARCHModelResult — full arch fit objects (use .forecast() for one-step-ahead vol)
         dcc : dict
             params    : tuple — (a, b) or (a, b, g)
             llh       : float — full log-likelihood
@@ -90,6 +91,7 @@ def run_pipeline(
             'Z':       Z,
             'sigmas':  sigmas,
             'params':  garch_out['params'],
+            'results': garch_out['results'],  # list of N ARCHModelResult — for forecasting / DM vol scaling
         },
         'dcc': dcc_result,   # keys: params, Q, R, H, llh, converged, delta
     }

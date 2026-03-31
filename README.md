@@ -156,6 +156,7 @@ result = fit(Z, sigmas, model='DCC', x0=np.array([0.03, 0.96]))
 | `Q` | ndarray (T, N, N) | Pseudo-correlation matrix path |
 | `R` | ndarray (T, N, N) | Conditional correlation matrix path |
 | `H` | ndarray (T, N, N) | Conditional covariance matrix path |
+| `sigmas` | ndarray (T, N) | GARCH conditional volatilities (pass-through of input; % daily) |
 | `llh` | float | Full Gaussian log-likelihood |
 | `converged` | bool | Optimizer convergence flag |
 | `delta` | float or None | ADCC stationarity scalar; `None` for DCC |

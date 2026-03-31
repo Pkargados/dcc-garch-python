@@ -107,6 +107,7 @@ def fit(
         Q         — ndarray, shape (T, N, N): pseudo-correlation path
         R         — ndarray, shape (T, N, N): conditional correlation path
         H         — ndarray, shape (T, N, N): conditional covariance path
+        sigmas    — ndarray, shape (T, N): GARCH conditional vols (pass-through of input)
         llh       — float: full Gaussian log-likelihood
         converged — bool: optimizer success flag
         delta     — float or None: ADCC δ scalar; None for DCC
@@ -210,6 +211,7 @@ def fit(
         'Q':         Q_path,
         'R':         R_path,
         'H':         H_path,
+        'sigmas':    sigmas,    # (T, N) GARCH conditional vols passed in — convenient for vol-scaled strategies
         'llh':       llh,
         'converged': result.success,
         'delta':     delta,
